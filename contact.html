@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Contact — Sol de Janeiro</title>
+    <meta name="description" content="Contact Sol de Janeiro for support, press, wholesale or general enquiries.">
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-nav">
+        <div class="site-container nav-inner">
+            <a class="brand" href="index.html">Sol de Janeiro</a>
+
+            <!-- consistent nav across pages with explicit links back to index anchors -->
+            <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links" id="navLinks" role="menu">
+                <li><a href="index.html#fragrances">Fragrances</a></li>
+                <li><a href="index.html#skincare">Skin Care</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#howto">How to</a></li>
+                <li><a href="index.html#store">Location</a></li>
+                <li><a href="enquiry.html">Enquiry</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="site-container section">
+        <h1>Contact us</h1>
+        <p>Send us a message — support, press, wholesale or general enquiries.</p>
+
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="post" novalidate>
+            <input type="hidden" name="access_key" value="42178a9e-f057-4d7f-9df9-2897ef380633">
+
+            <fieldset>
+                <label for="cName">Full name</label>
+                <input id="cName" name="name" type="text" required minlength="2" maxlength="80" />
+                <div class="error" data-for="cName"></div>
+
+                <label for="cEmail">Email</label>
+                <input id="cEmail" name="email" type="email" required />
+                <div class="error" data-for="cEmail"></div>
+
+                <label for="cPhone">Phone</label>
+                <input id="cPhone" name="phone" type="tel" pattern="^\+?[0-9\s\-]{7,20}$" />
+                <div class="error" data-for="cPhone"></div>
+
+                <label for="cType">Message type</label>
+                <select id="cType" name="messageType" required>
+                    <option value="">-- Choose --</option>
+                    <option value="support">Support</option>
+                    <option value="press">Press</option>
+                    <option value="wholesale">Wholesale</option>
+                    <option value="other">Other</option>
+                </select>
+                <div class="error" data-for="cType"></div>
+
+                <label for="cSubject">Subject</label>
+                <input id="cSubject" name="subject" type="text" maxlength="120" required />
+                <div class="error" data-for="cSubject"></div>
+
+                <label for="cMessage">Message</label>
+                <textarea id="cMessage" name="message" minlength="10" maxlength="5000" required></textarea>
+                <div class="error" data-for="cMessage"></div>
+
+                <label>
+                    <input id="cConsent" name="consent" type="checkbox" required />
+                    I consent to having this website store my submitted information for the purpose of responding.
+                </label>
+                <div class="error" data-for="cConsent"></div>
+
+                <div style="margin-top:12px;">
+                    <button type="submit" class="btn">Send message</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <section id="contactResult" class="mt-sm" aria-live="polite"></section>
+    </main>
+</body>
+
+</html>

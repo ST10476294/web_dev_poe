@@ -1,0 +1,5 @@
+# Allow all agents to crawl site; point to sitemap
+User-agent: *
+Disallow:
+
+Sitemap: https://example.com/sitemap.xml

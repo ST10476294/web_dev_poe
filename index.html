@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Basic meta  -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Primary SEO -->
+    <title>Sol de Janeiro — Brazilian Beauty, Fragrances & Body Care</title>
+    <meta name="description"
+        content="Sol de Janeiro — Brazilian-inspired fragrances and body care. Shop Cheirosa 62, Bum Bum Cream and hydrating body oils. Free UK shipping options.">
+    <meta name="keywords"
+        content="Brazilian skincare, Cheirosa 62, Bum Bum Cream, body cream, body oil, fragrance, Sol de Janeiro, bath and body">
+    <meta name="robots" content="index,follow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://example.com/index.html">
+
+    <!-- Open Graph / Twitter -->
+    <meta property="og:locale" content="en_GB">
+    <meta property="og:site_name" content="Sol de Janeiro">
+    <meta property="og:title" content="Sol de Janeiro — Brazilian Beauty, Fragrances & Body Care">
+    <meta property="og:description"
+        content="Brazilian-inspired fragrances and body care. Shop Cheirosa 62, Bum Bum Cream and hydrating body oils.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://example.com/index.html">
+    <meta property="og:image" content="images/collection_picture1.jpg">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sol de Janeiro — Brazilian Beauty">
+    <meta name="twitter:description" content="Shop Cheirosa 62, Bum Bum Cream & more.">
+    <meta name="twitter:image" content="images/collection_picture1.jpg">
+
+    <!-- Security / best-practice meta -->
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Structured data (Organization + LocalBusiness hints) -->
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Sol de Janeiro",
+    "url": "https://example.com/",
+    "logo": "https://example.com/images/collection_picture1.jpg",
+    "sameAs": [
+      "https://www.facebook.com/yourbrand",
+      "https://www.instagram.com/yourbrand",
+      "https://twitter.com/yourbrand"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "telephone": "+44-20-0000-0000",
+      "contactType": "customer service",
+      "areaServed": "GB"
+    }]
+  }
+  </script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" ... />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" ...></script>
+
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <!-- Header / navigation: internal anchors added for SEO & crawlability -->
+    <header>
+        <nav class="site-nav" aria-label="Primary">
+            <div class="site-container nav-inner">
+                <a class="brand" href="#home">Sol de Janeiro</a>
+
+                <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">
+                    ☰
+                </button>
+
+                <ul class="nav-links" id="navLinks" role="menu">
+                    <li><a href="#fragrances">Fragrances</a></li>
+                    <li><a href="#skincare">Skin Care</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#howto">How to</a></li>
+                    <li><a href="#store">Location</a></li>
+                    <li><a href="#footer">Footer</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Landing Page (ID for internal linking) -->
+    <section id="home" class="landing_page site-container section">
+        <div class="row align-center">
+            <div class="col col-half text-start">
+                <h1>Sol de Janeiro</h1> <!-- primary H1 for the page -->
+                <h2>Brazilian Beauty with Calm, Vibrant Energy</h2>
+                <p>Experience the essence of Brazilian beauty rituals that celebrate sun-kissed skin and intoxicating
+                    fragrances. Shop signature products like Cheirosa 62 and the cult-favourite Bum Bum Cream.</p>
+                <div class="button-row">
+                    <a href="#fragrances" class="btn" id="collection_btn">Shop Collection</a>
+                    <a href="#signature" class="btn ghost" id="story_btn">Discover Story</a>
+                </div>
+            </div>
+
+            <div class="col col-half text-center">
+                <img src="images/landing_page_img.png" class="img img-responsive rounded"
+                    alt="Sol de Janeiro tropical beauty — bottle and beach scene">
+            </div>
+        </div>
+    </section>
+
+    <!-- Fragrance Collection -->
+    <section id="fragrances" class="fragrance_collection section">
+        <div class="site-container">
+            <div class="row align-center">
+                <div class="col col-half">
+                    <h2>Discover Our Sun-Kissed Fragrance Collection</h2>
+                    <p>Immerse yourself in our Brazilian-inspired fragrances, from Cheirosa 62 to Cheirosa 40. Each
+                        scent blends pistachio, salted caramel and vanilla to evoke golden beaches and warm nights.</p>
+                </div>
+
+                <div class="col col-half text-center">
+                    <img src="images/collection_picture1.jpg" class="img img-responsive rounded"
+                        alt="Sol de Janeiro fragrance bottles — Cheirosa collection" loading="lazy">
+                </div>
+            </div>
+
+            <div class="grid grid-2 grid-md-4 gap-sm mt-sm" id="collectionGrid">
+                <div class="grid-item"><img src="images/collection_picture2.jpg"
+                        class="img img-responsive rounded gallery-img"
+                        alt="Cheirosa 62 fragrance bottle — pistachio and vanilla notes" loading="lazy"></div>
+                <div class="grid-item"><img src="images/collection_picture3.jpg"
+                        class="img img-responsive rounded gallery-img"
+                        alt="Cheirosa 40 fragrance bottle — black amber and plum" loading="lazy"></div>
+                <div class="grid-item"><img src="images/collection_picture4.jpg"
+                        class="img img-responsive rounded gallery-img"
+                        alt="Cheirosa 71 fragrance bottle — sea salt and caramelised vanilla" loading="lazy"></div>
+                <div class="grid-item"><img src="images/collection_picture5.jpg"
+                        class="img img-responsive rounded gallery-img" alt="Radiance body oil product image"
+                        loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skincare Rituals -->
+    <section id="skincare" class="skincareRituals">
+        <div class="site-container section">
+            <h2>Brazilian Skincare Rituals for Radiant Skin</h2>
+
+            <div class="grid grid-1 grid-md-3 gap-md mt-sm">
+                <article class="feature" aria-labelledby="feature-1">
+                    <img src="icons/sun-2-svgrepo-com.svg" alt="Sun icon for daily sun protection" class="icon" />
+                    <div>
+                        <h3 id="feature-1">Daily Sun Protection</h3>
+                        <p>Nourishing body creams infused with protective ingredients to keep skin hydrated and safe
+                            from UV damage.</p>
+                    </div>
+                </article>
+
+                <article class="feature" aria-labelledby="feature-2">
+                    <img src="icons/ocean-waves-svgrepo-com.svg" alt="Waves icon for hydration ritual" class="icon" />
+                    <div>
+                        <h3 id="feature-2">Hydration Ritual</h3>
+                        <p>Layer our lightweight oils and rich creams for maximum moisture. Best applied to slightly
+                            damp skin for improved absorption.</p>
+                    </div>
+                </article>
+
+                <article class="feature" aria-labelledby="feature-3">
+                    <img src="icons/flower-svgrepo-com.svg" alt="Flower icon for evening indulgence" class="icon" />
+                    <div>
+                        <h3 id="feature-3">Evening Indulgence</h3>
+                        <p>Finish the day with our body butters to promote circulation and leave skin silky overnight.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signature Fragrances -->
+    <section id="signature" class="signatureFragrance site-container section">
+        <h2>Our Signature Cheirosa Fragrances</h2>
+        <p>Each Cheirosa fragrance captures different moods of Brazilian life — carnival, beach sunsets, and intimate
+            nights.</p>
+
+        <div class="grid grid-1 grid-md-3 gap-md mt-sm">
+            <article class="card product-card" data-id="1">
+                <div class="card-body">
+                    <h3>Cheirosa 62</h3>
+                    <p class="product-desc">Pistachio and salted caramel blended with warm vanilla.</p>
+                    <p class="product-price" data-price="45">£45</p>
+                </div>
+            </article>
+
+            <article class="card product-card" data-id="2">
+                <div class="card-body">
+                    <h3>Cheirosa 40</h3>
+                    <p class="product-desc">Black amber plum and vanilla woods for evening wear.</p>
+                    <p class="product-price" data-price="42">£42</p>
+                </div>
+            </article>
+
+            <article class="card product-card" data-id="3">
+                <div class="card-body">
+                    <h3>Cheirosa 71</h3>
+                    <p class="product-desc">Sea salt and caramelised vanilla reminiscent of ocean breezes.</p>
+                    <p class="product-price" data-price="48">£48</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Interactive / Dynamic Section (tabs, accordion, product list, map, gallery lightbox) -->
+    <section class="interactive site-container section" id="interactiveSection">
+        <h2>Explore Our Full Range</h2>
+
+        <!-- Tabs -->
+        <div class="tabs" role="tablist" aria-label="Interactive features">
+            <div class="tab-buttons">
+                <button class="tab-btn active" data-tab-target="#tab-products" role="tab">Shop All Products</button>
+                <button class="tab-btn" data-tab-target="#tab-faq" role="tab">FAQ</button>
+                <button class="tab-btn" data-tab-target="#tab-map" role="tab">Find Stores</button>
+            </div>
+            <div class="tab-panels">
+                <div id="tab-products" class="tab-panel active" role="tabpanel">
+                    <h3>All Products</h3>
+                    <p>Search, sort, and explore our complete collection of Brazilian-inspired body care.</p>
+                    <div class="controls">
+                        <input id="searchInput" type="search" placeholder="Search products..."
+                            aria-label="Search products" />
+                        <select id="sortSelect" aria-label="Sort products">
+                            <option value="default">Sort: Featured</option>
+                            <option value="price-asc">Price: Low → High</option>
+                            <option value="price-desc">Price: High → Low</option>
+                            <option value="name-asc">Name: A → Z</option>
+                        </select>
+                    </div>
+                    <div id="productGrid" class="grid grid-1 grid-md-3 gap-md mt-sm">
+                        <!-- Products will be dynamically loaded here by main.js -->
+                    </div>
+                </div>
+
+                <div id="tab-faq" class="tab-panel" role="tabpanel">
+                    <h3>Frequently Asked Questions</h3>
+                    <!-- Accordion -->
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item">
+                            <button class="accordion-toggle">How do I layer fragrances?</button>
+                            <div class="accordion-panel">
+                                <p>Start with our body wash, apply a matching body cream to moisturize, then finish with
+                                    a fragrance mist on your pulse points for a scent that lasts all day.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-toggle">What is the iconic Bum Bum Cream?</button>
+                            <div class="accordion-panel">
+                                <p>It's our award-winning, visibly firming body cream. Infused with Guaraná extract, it
+                                    helps smooth and tighten the appearance of your skin.</p>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <button class="accordion-toggle">Are your products vegan and cruelty-free?</button>
+                            <div class="accordion-panel">
+                                <p>Yes, our entire product line is vegan and certified cruelty-free. We never test on
+                                    animals.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="tab-map" class="tab-panel" role="tabpanel">
+                    <h3>Find a Store Near You</h3>
+                    <p>Our products are available at premium department stores and beauty specialists. Use the
+                        interactive map below to find your nearest stockist.</p>
+                    <div id="map" class="map-container" aria-label="Store locations map"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (downgraded to H2 to keep single H1) -->
+    <section id="testimonials" class="testimonial section">
+        <div class="site-container">
+            <h2>Customer Reviews and Glowing Testimonials</h2>
+
+            <div class="grid grid-1 grid-md-3 gap-md mt-sm">
+                <article class="card border-warning">
+                    <div class="card-body">
+                        <h3>Rachel, Edinburgh</h3>
+                        <p>"The Cheirosa 62 fragrance is absolutely divine! It's become my signature scent."</p>
+                    </div>
+                </article>
+
+                <article class="card border-warning">
+                    <div class="card-body">
+                        <h3>Emma, Manchester</h3>
+                        <p>"Bum Bum Cream has transformed my skin. It's incredibly moisturising and smells like heaven."
+                        </p>
+                    </div>
+                </article>
+
+                <article class="card border-warning">
+                    <div class="card-body">
+                        <h3>Sarah, London</h3>
+                        <p>"I'm obsessed with the entire collection! The body oils give me that Brazilian glow."</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- How To -->
+    <section id="howto" class="howto site-container section">
+        <h2>How to Layer Fragrances for Lasting Scent</h2>
+
+        <div class="grid grid-1 grid-md-2 gap-md mt-sm">
+            <!-- ...existing content... -->
+        </div>
+    </section>
+
+    <!-- Store -->
+    <section id="store" class="store section">
+        <div class="site-container">
+            <h2 class="center">Stockist Locator: Find Sol de Janeiro Near You</h2>
+
+            <div class="row">
+                <div class="col col-half stacked-center">
+                    <h3>Premium Department Stores</h3>
+                    <ul>
+                        <li><strong>Selfridges</strong> — London, Birmingham, Manchester</li>
+                        <li><strong>Harvey Nichols</strong> — Multiple locations</li>
+                        <li><strong>John Lewis</strong> — Available in 20+ stores</li>
+                        <li><strong>Harrods</strong> — Knightsbridge flagship</li>
+                    </ul>
+
+                    <h3>Beauty Specialists</h3>
+                    <ul>
+                        <li><strong>Space NK</strong> — 65+ locations</li>
+                        <li><strong>Cult Beauty</strong> — Online & pop-ups</li>
+                        <li><strong>Sephora UK</strong> — Online exclusive collection</li>
+                    </ul>
+                </div>
+
+                <div class="col col-half text-center">
+                    <img src="images/store_image2.jpg" class="img img-responsive rounded"
+                        alt="Store shelf display with Sol de Janeiro products">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer: social sharing links added -->
+    <footer id="footer" class="footer_section">
+        <div class="site-container footer-inner">
+            <div class="row align-center">
+                <div class="col col-half text-start">
+                    <h2 class="footer_heading">Join Our Newsletter for Exclusive Offers and Tips</h2>
+                    <p>Subscribe for exclusive discounts and tips directly from Rio de Janeiro.</p>
+
+                    <div class="button-row mt-sm">
+                        <a href="#" class="btn ghost" id="subscribe_btn">Subscribe now</a>
+                        <a href="enquiry.html" class="btn outline" id="learn_btn">Learn more</a>
+                    </div>
+                </div>
+
+                <div class="col col-half text-center mt-sm">
+                    <img src="images/footer_image.jpg" alt="Sol de Janeiro hero product and beach imagery"
+                        class="img img-responsive rounded" />
+                </div>
+            </div>
+
+            <div class="row footer-bottom">
+                <div class="col">
+                    <p class="mb-0">&copy; 2024 Sol de Janeiro. All rights reserved.</p>
+                </div>
+
+                <div class="col text-end">
+                    <a href="#" class="link">Privacy Policy</a>
+                    <a href="#" class="link">Terms of Service</a>
+                    <a href="contact.html" class="link">Contact Us</a>
+
+                    <!-- Social share links -->
+                    <div style="display:inline-block;margin-left:12px;">
+                        <a class="link social-share" data-network="twitter" href="#"
+                            title="Share on Twitter">Twitter</a>
+                        <a class="link social-share" data-network="facebook" href="#"
+                            title="Share on Facebook">Facebook</a>
+                        <a class="link social-share" data-network="native" href="#" title="Share this page">Share</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox modal for gallery images -->
+    <div id="lightbox" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button class="modal-close" aria-label="Close">✕</button>
+            <img id="lightboxImage" src="" alt="Expanded image" />
+            <p id="lightboxCaption" class="modal-caption"></p>
+        </div>
+    </div>
+
+    <!-- Generic modal used for product quick view -->
+    <div id="generalModal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content small">
+            <button class="modal-close" aria-label="Close">✕</button>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+</body>
+
+</html>

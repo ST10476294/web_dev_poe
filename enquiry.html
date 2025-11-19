@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Enquiry — Sol de Janeiro</title>
+    <meta name="description"
+        content="Submit an enquiry about services, products, volunteering or sponsorship with Sol de Janeiro.">
+    <link rel="stylesheet" href="style.css" />
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <header class="site-nav">
+        <div class="site-container nav-inner">
+            <a class="brand" href="index.html">Sol de Janeiro</a>
+
+            <!-- consistent nav across pages with explicit links back to index anchors -->
+            <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Toggle navigation">☰</button>
+            <ul class="nav-links" id="navLinks" role="menu">
+                <li><a href="index.html#fragrances">Fragrances</a></li>
+                <li><a href="index.html#skincare">Skin Care</a></li>
+                <li><a href="index.html#testimonials">Testimonials</a></li>
+                <li><a href="index.html#howto">How to</a></li>
+                <li><a href="index.html#store">Location</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main class="site-container section">
+        <h1>Enquiry</h1>
+        <p>Use this form to request services, product information, volunteering or sponsorship details.</p>
+
+        <form id="enquiryForm" action="https://api.web3forms.com/submit" method="post" novalidate>
+            <input type="hidden" name="access_key" value="42178a9e-f057-4d7f-9df9-2897ef380633">
+
+            <fieldset>
+                <label for="enqName">Full name</label>
+                <input id="enqName" name="name" type="text" placeholder="Your full name" required minlength="2"
+                    maxlength="80" />
+                <div class="error" data-for="enqName"></div>
+
+                <label for="enqEmail">Email</label>
+                <input id="enqEmail" name="email" type="email" placeholder="you@example.com" required />
+                <div class="error" data-for="enqEmail"></div>
+
+                <label for="enqPhone">Phone</label>
+                <input id="enqPhone" name="phone" type="tel" placeholder="+44 7000 000000"
+                    pattern="^\+?[0-9\s\-]{7,20}$" required />
+                <div class="error" data-for="enqPhone"></div>
+
+                <label for="enqType">Enquiry type</label>
+                <select id="enqType" name="type" required>
+                    <option value="">-- Choose --</option>
+                    <option value="service">Service</option>
+                    <option value="product">Product</option>
+                    <option value="volunteer">Volunteering</option>
+                    <option value="sponsorship">Sponsorship</option>
+                </select>
+                <div class="error" data-for="enqType"></div>
+
+                <label for="enqProduct" class="js-hide">Product (if product enquiry)</label>
+                <select id="enqProduct" name="product" class="js-hide">
+                    <option value="">-- Select product --</option>
+                    <option value="cheirosa62" data-price="45">Cheirosa 62 — £45</option>
+                    <option value="cheirosa40" data-price="42">Cheirosa 40 — £42</option>
+                    <option value="cheirosa71" data-price="48">Cheirosa 71 — £48</option>
+                    <option value="bumbum" data-price="30">Bum Bum Cream — £30</option>
+                </select>
+                <div class="error" data-for="enqProduct"></div>
+
+                <label for="enqQuantity" class="js-hide">Quantity</label>
+                <input id="enqQuantity" name="quantity" class="js-hide" type="number" min="1" max="100" value="1" />
+                <div class="error" data-for="enqQuantity"></div>
+
+                <label for="enqDate">Preferred date (optional)</label>
+                <input id="enqDate" name="date" type="date" />
+                <div class="error" data-for="enqDate"></div>
+
+                <label for="enqMessage">Details</label>
+                <textarea id="enqMessage" name="message" placeholder="Tell us more (200–2000 chars)" minlength="20"
+                    maxlength="2000" required></textarea>
+                <div class="error" data-for="enqMessage"></div>
+
+                <label>
+                    <input id="enqConsent" name="consent" type="checkbox" required />
+                    I consent to having this website store my submitted information for the purpose of responding.
+                </label>
+                <div class="error" data-for="enqConsent"></div>
+
+                <div style="margin-top:12px;">
+                    <button type="submit" class="btn">Submit enquiry</button>
+                </div>
+            </fieldset>
+        </form>
+
+        <section id="enquiryResult" class="mt-sm" aria-live="polite"></section>
+    </main>
+</body>
+
+</html>
